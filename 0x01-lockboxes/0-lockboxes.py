@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module for lockboxes task 0
+""" implements a breadth-first search (BFS) algorithm
+ to solve this problem.
 """
 
 
