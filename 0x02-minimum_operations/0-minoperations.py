@@ -4,12 +4,14 @@
 
 
 def minOperations(n):
+    
     """calculates the fewest number of operations
         needed to result in exactly n H characters in the file.
     Returns:
         int: The number of minimal operations needed to get n H characters
     or 0 if it is impossible to achieve n.
     """
+    
     pasted_chars = 1
     clipboard = 0
     counter = 0
@@ -24,10 +26,9 @@ def minOperations(n):
             counter += 1
             continue
 
-        remaining = n - pasted_chars # remaining chars to Paste
+        remaining = n - pasted_chars 
         if remaining < clipboard:
             return 0
-        # check if can paste
         if remaining % pasted_chars != 0:
             pasted_chars += clipboard
             counter += 1
