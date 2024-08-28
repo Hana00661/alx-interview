@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard.
-Write a program that solves the N queens problem."""
+"""Write a program that solves the N queens problem.
+"""
 
 import sys
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     # iterate thru rows
     while r < n:
         goback = False
-        """ iterate thru columns """
+        # iterate thru columns 
         while c < n:
             # check is current column is safe
             safe = True
@@ -49,8 +49,8 @@ if __name__ == '__main__':
 
             cords = [r, c]
             placed_queens.append(cords)
-            """if last row, append solution and reset all to last unfinished row
-            and last safe column in that row """
+            #if last row, append solution and reset all to last unfinished row
+
             if r == n - 1:
                 solutions.append(placed_queens[:])
                 for cord in placed_queens:
@@ -69,8 +69,8 @@ if __name__ == '__main__':
             break
         if stop:
             break
-        """on fail: go back to previous row
-        #and continue from last safe column + 1 """
+        # on fail: go back to previous row
+        # and continue from last safe column + 1
         if goback:
             r -= 1
             while r >= 0:
